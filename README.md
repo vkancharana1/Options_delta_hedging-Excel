@@ -66,8 +66,6 @@ where:
 - **T** = time to expiry, in years
 - **N(·)** = standard normal cumulative distribution function
 
-**Excel functions demonstrated:** `LN`, `SQRT`, `NORM.DIST`, percentage handling, and absolute references to input cells.
-
 **Workbook-specific note:** The model includes a reference underlying value of **25,910.05**, a **4-day** expiry assumption, and an **8%** rate in the illustrative formulas. Additional delta-related values are populated across **12 selected strike rows**, but the cells are **not all backed by formulas** in the uploaded workbook. The option chain's vendor-provided Greeks should not be mistaken for independently computed outputs. The formulas also vary in implementation between some example rows, so treat the sheet as a demonstration rather than a fully validated, standardized pricing engine.
 
 ## 2. Dynamic delta hedging simulation
@@ -142,8 +140,6 @@ At expiry, the workbook reports a financing-adjusted cumulative stock cost of ap
 
 **Interpretation:** The result illustrates how a hedge generates trading and financing cash flows as delta evolves. It is **not** evidence of $263K of profit, model accuracy, hedge effectiveness relative to a benchmark, or actual realized trading performance. The workbook does not establish a comparison with an unhedged strategy, bid–ask/commission costs, or real executions.
 
-## Excel proficiency demonstrated
-
 | Spreadsheet capability | Where it appears | Practical purpose |
 |---|---|---|
 | Formula-driven financial modeling | Dynamic Delta Hedging | Connect option sensitivities to hedge positions and cash flows |
@@ -170,13 +166,6 @@ At expiry, the workbook reports a financing-adjusted cumulative stock cost of ap
 - **Model assumptions:** The simple Black–Scholes framework assumes constant volatility/rates and idealized trading assumptions; actual markets have additional frictions.
 - **No formal backtest or benchmarking:** The reported hedge cost is a scenario outcome, not a measured improvement versus a benchmark.
 - **Future work:** Extend formulas consistently across all rows, validate Greeks against reference calculations, add line charts and scenario stress tests, incorporate transaction costs, and compare hedged versus unhedged P&L.
-
-## Resume-ready description
-
-**Options Delta Analysis & Dynamic Hedging | Microsoft Excel, Black–Scholes**
-
-- Built an Excel-based weekly delta-hedging simulation for **100,000 short call options** over **20 weeks**, modeling share rebalancing, financing cash flows, and a **$263K terminal hedge cost**.
-- Analyzed **78 NIFTY option-chain strikes (23,950–27,800)** and demonstrated Black–Scholes delta calculations using **`LN`, `SQRT`, `NORM.DIST`, and absolute/relative cell references**.
 
 ---
 
